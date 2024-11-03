@@ -58,5 +58,3 @@ class FernetHasher:
             return self.fernet.decrypt(value).decode()
         except InvalidToken as err:
             return 'Token inválido'
-
-print(FernetHasher.create_key('1234'))
