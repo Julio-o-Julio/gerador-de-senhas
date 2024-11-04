@@ -39,8 +39,6 @@ class BaseModel:
             tmp_dict = dict(zip(atributes, split_values))
             results.append(tmp_dict)
 
-        print(results)
-        
         return results
 
 class Password(BaseModel):

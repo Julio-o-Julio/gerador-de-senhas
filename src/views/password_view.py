@@ -35,6 +35,10 @@ class FernetHasher:
 
     @classmethod
     def archive_key(cls, key):
+        key_path = Path(cls.KEY_DIR)
+        if not key_path.exists():
+            key_path.mkdir()
+
         file_name = f'key_{cls._get_ramdom_string(length=8)}.key'
         while Path(cls.KEY_DIR / file_name).exists():
             file_name = f'key_{cls._get_ramdom_string(length=8)}.key'
